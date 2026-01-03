@@ -1,5 +1,4 @@
 import gradio as gr
-import os
 from pathlib import Path
 from src.transcriber import transcribe_media
 
@@ -45,7 +44,9 @@ def launch_gui():
                 submit_btn = gr.Button("Transcribe", variant="primary")
 
             with gr.Column():
-                output_text = gr.Textbox(label="Transcription", buttons=["copy"], lines=20)
+                output_text = gr.Textbox(
+                    label="Transcription", buttons=["copy"], lines=20
+                )
                 download_file = gr.File(label="Download Text File")
 
         submit_btn.click(

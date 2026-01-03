@@ -81,6 +81,20 @@ uv run python -m src.cli transcribe ../test.mp4
 - **FFmpeg not found**: Ensure `ffmpeg` is installed and in your system PATH (`brew install ffmpeg`).
 - **Memory Issues**: The default model is `large-v3-turbo`. If you have limited RAM (e.g., 8GB), you might experience slowdowns with very long files.
 
+## Developer Setup
+
+This project uses `pre-commit` to ensure code quality.
+
+1.  **Install Hooks**:
+    ```bash
+    make install
+    ```
+    This sets up the git hook to run `ruff` (linting and formatting) automatically on every commit.
+
+2.  **Make Commands**:
+    - `make up`: Start the web GUI.
+    - `make pc`: Run pre-commit checks on all files manually.
+
 ## License
 
 MIT

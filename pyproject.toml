@@ -1,0 +1,17 @@
+[project]
+name = "whisper-transcriber"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.3.1",
+    "ffmpeg-python>=0.2.0",
+    "gradio>=6.2.0",
+    "mlx-whisper>=0.4.3",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.10",
+]
